@@ -1,0 +1,3 @@
+- What are the biggest challenges facing adoption and incorporation of CDS, and how does your future concept of CDS Connect address those challenges?
+- How does your future concept of CDS Connect help to realize the promise of CDS to improve the use of evidence-based practices, improve patient and provider experience, and reduce diagnostic errors and costs?
+- How does your future concept of CDS Connect help to increase patient and provider trust in CDS?
