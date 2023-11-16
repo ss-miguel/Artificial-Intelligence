@@ -713,3 +713,268 @@ chunked_oz.append(chunk_parser.parse(pos_tagged_sentence))
 most_common_chunks = chunk_counter(chunked_oz)
 print(most_common_chunks)
 ```
+
+## Discover Insights into Classic Texts
+
+Novels and text contain insights into ideologies and places that are often originally unknown to the reader. By reading a written piece, you uncover the opinions of the author on their chosen topic and come to understand both the topic and how the author thinks.
+
+In this project you will perform a natural language parsing analysis to gain deeper insight into one of two famous and often discussed novels in the public domain: [Oscar Wilde’s _The Picture of Dorian Gray_](http://www.gutenberg.org/ebooks/174)or [Homer’s _The Iliad!_](http://www.gutenberg.org/ebooks/6130) Fear not if you haven’t heard or read the novels, one of the beauties of natural language parsing with regular expressions is the ability to gain insight into lengthy pieces of text without a formal read!
+
+By the end of this project, you will find out the main topics of discussion in the novel of your choosing and can begin to discern some of the author’s thoughts and beliefs!
+
+#### Setup Instructions
+
+You have two options of completing this assignment. Either here, within Codecademy’s output terminal, or on your own, in case you’re more comfortable using a Jupyter notebook.If you choose to do this project on your computer instead of Codecademy, you can download what you’ll need by clicking the “Download” button below. If you need help setting up your computer, be sure to check out our setup guides:
+
+- [Command Line Interface Setup](https://www.codecademy.com/articles/command-line-setup)
+- [Introducing Jupyter Notebook](https://www.codecademy.com/articles/introducing-jupyter-notebook)
+- [Setting up Jupyter Notebook](https://www.codecademy.com/articles/setting-up-jupyter-notebook)
+- [Getting Started with Jupyter](https://www.codecademy.com/articles/getting-started-with-jupyter)
+- [Getting More out of Jupyter Notebook](https://www.codecademy.com/articles/getting-more-out-of-jupyter-notebook)
+
+Open **Discover Insights into Classic Texts.ipynb** and follow the steps in the Jupyter Notebook. If you get stuck, you can look at **Discover Insights into Classic Texts_Solution.ipynb** for the answer.
+
+[Download](https://static-assets.codecademy.com/curriculum-datasets/Solutions/Discover%20Insights%20into%20Classic%20Texts.zip)
+
+### Tasks
+Mark the tasks as complete by checking them off
+## Import and Preprocess Text Data
+1. Given to you in the code editor are text files for the _The Picture of Dorian Gray_, named `dorian_gray.txt`, and _The Iliad_, named `the_iliad.txt`, sourced from [Project Gutenberg](https://www.gutenberg.org/). Import the text of your choosing, convert it to lowercase, and name it `text` using the following line of code
+```
+text = open("_______.txt",encoding='utf-8').read().lower()
+```
+Replace the blank with the name of the text file for the novel you choose to analyze!
+
+Hint
+You can import the text of your choosing using Python’s `open()`function and lowercase the text with `.lower()`.
+If you choose to analyze _The Picture of Dorian Gray_:
+```
+text = open("dorian_gray.txt",encoding='utf-8').read().lower()
+```
+If you choose to analyze _The Iliad_:
+```
+text = open("the_iliad.txt",encoding='utf-8').read().lower()
+```
+
+2. With the text imported, now you need to split the text into individual sentences and then individual words. This allows you to perform a sentence-by-sentence parsing analysis! Provided to you in the code editor is a customized function `word_sentence_tokenize()` that will sentence tokenize a text and then word tokenize each sentence, returning a list of word tokenized sentences. Call the function with `text` as an argument and save the result to a variable named `word_tokenized_text`.
+
+Hint
+Call `word_sentence_tokenize()` as follows:
+```
+word_tokenized_text = word_sentence_tokenize(_____)
+```
+Replace the blank with the text you are splitting into sentences and words.
+
+3. Save any word tokenized sentence in `word_tokenized_text` to a variable named `single_word_tokenized_sentence`. Print `single_word_tokenized_sentence` as a check to visualize what you have done so far!
+
+Hint
+You can save and print the word tokenized sentence at index `100` in `word_tokenized_text` as follows:
+```
+single_word_tokenized_sentence = word_tokenized_text[100]print(single_word_tokenized_sentence)
+```
+
+## Part-of-speech Tag Text
+
+4. Next you can part-of-speech tag each sentence to allow for syntax parsing! Begin by creating a list named `pos_tagged_text` that will hold each part-of-speech tagged sentence from the novel.
+
+Hint
+You can create an empty list in Python with either of the below syntax:
+```
+new_list = list()
+```
+OR
+```
+new_list = []
+```
+
+5. Loop through each word tokenized sentence in `word_tokenized_text` and part-of-speech tag each sentence using `nltk`‘s `pos_tag()`function. Append the result to `pos_tagged_text`.
+
+Hint
+You can loop through each word tokenized sentence as shown below:
+```
+for word_tokenized_sentence in word_tokenized_text:
+```
+Then part-of-speech tag each word tokenized text with `nltk`‘s `pos_tag()`function:
+```
+pos_tagged_text.append(pos_tag(word_tokenized_sentence))
+```
+
+6. Save any part-of-speech tagged sentence in `pos_tagged_text` to a variable named `single_pos_sentence`. Print `single_pos_sentence` as a check to visualize what you have done so far!
+
+Hint
+You can save and print the part-of-speech tagged sentence at index `100`in `pos_tagged_text` as follows:
+```
+single_pos_sentence = pos_tagged_text[100]print(single_pos_sentence)
+```
+
+## Chunk Sentences
+
+7. Now that you have part-of-speech tagged your text, you can move on to syntax parsing! Begin by defining a piece of chunk grammar `np_chunk_grammar` that will chunk a noun phrase. Remember, a noun phrase consists of an optional determiner `DT`, followed by any number of adjectives `JJ`, followed by a noun `NN`.
+
+Hint
+A noun phrase can be expressed in chunk grammar as shown below: 
+```
+np_chunk_grammar = "NP: {<DT>?<JJ>*<NN>}"
+```
+
+8. Create a `nltk` `RegexpParser`object named `np_chunk_parser`using the noun phrase chunk grammar you defined as an argument.
+
+Hint
+You can create a `RegexpParser` object with the following syntax:
+```
+np_chunk_parser = RegexpParser(_________)
+```
+Fill the blank with the noun phrase chunk grammar you defined earlier!
+
+9. Define a piece of chunk grammar named `vp_chunk_grammar` that will chunk a verb phrase of the following form: noun phrase, followed by a verb `VB`, followed by an optional adverb `RB`.
+
+Hint
+A verb phrase can be expressed in chunk grammar as shown below: 
+```
+vp_chunk_grammar = "VP: {<DT>?<JJ>*<NN><VB.*><RB.?>?}"
+```
+
+10. Create a `nltk` `RegexpParser`object named `vp_chunk_parser`using the verb phrase chunk grammar you defined as an argument.
+
+Hint
+You can create a `RegexpParser` object with the following syntax:
+```
+chunk_parser = RegexpParser(_________)
+```
+Fill the blank with the verb phrase chunk grammar you defined earlier!
+
+11. Create two empty lists `np_chunked_text` and `vp_chunked_text` that will hold the chunked sentences from your text.
+
+Hint
+You can create an empty list in Python with either of the below syntax:
+```
+new_list = list()
+```
+OR
+```
+new_list = []
+```
+
+12. Loop through each part-of-speech tagged sentence in `pos_tagged_text` and noun phrase chunk each sentence using your `RegexpParser`‘s `.parse()` method. Append the result to `np_chunked_text`.
+
+Hint
+You can loop through each part-of-speech tagged sentence as shown below:
+```
+for pos_tagged_sentence in pos_tagged_text:
+```
+Then within the for-loop, noun phrase chunk each sentence with `np_chunk_parser`‘s `.parse()` method and append to `np_chunked_text`:
+```
+np_chunked_text.append(np_chunk_parser.parse(pos_tagged_sentence))
+```
+
+13. Within the same loop you defined in the previous task, verb phrase chunk each part-of-speech tagged sentence using your `RegexpParser`‘s `.parse()` method. Append the result to `vp_chunked_text`.
+
+Hint
+Verb phrase chunk each part-of-speech tagged sentence with `vp_chunk_parser`‘s `.parse()` method and append to `vp_chunked_text`:
+```
+vp_chunked_text.append(vp_chunk_parser.parse(pos_tagged_sentence))
+```
+Make sure this line of code is within the same loop you defined in the last task!
+
+## Analyze Chunks
+
+14. Now that you have chunked your novel, you can analyze the chunk frequencies to gain insights! A function `np_chunk_counter()`that returns the `30` most common NP-chunks from a list of chunked sentences has been imported to the workspace for you. Call `np_chunk_counter()`with `np_chunked_text` as an argument and save the result to a variable named `most_common_np_chunks`. Print `most_common_np_chunks`. What sticks out to you about the most common noun phrase chunks? Are you surprised by anything? Open the hint to see our analysis. Want to see how `np_chunk_counter()` works? Use the file navigator to open `chunk_counters.py` and inspect `np_chunk_counter()`.
+
+Hint
+You can call `np_chunk_counter()` to count the most common noun phrase chunks as follows:
+```
+most_common_np_chunks = np_chunk_counter(np_chunked_text)
+```
+Print `most_common_np_chunks` to view the `30` most common chunks in descending order, given in the form `(NP-Chunk, Count)`.
+
+**Analysis for _The Picture of Dorian Gray_**
+
+Looking at `most_common_np_chunks`, you can identify characters of importance in the text such as `henry`, `harry`, `dorian gray`, and `basil`, based on their frequency. Additionally another noun phrase `the picture` appears to be very relevant.
+
+**Analysis for _The Iliad_**
+
+Looking at `most_common_np_chunks`, you can identify characters of importance in the text such as `hector` and `jove`based on their frequency. Additionally a location of importance, `troy`, is mentioned often. A theme of `war` can also implied by its high frequency count.
+
+15. A function `vp_chunk_counter()`that returns the `30` most common VP-chunks from a list of chunked sentences has been imported to the workspace for you. Call `vp_chunk_counter()`with `vp_chunked_text` as an argument and save the result to a variable named `most_common_vp_chunks`. Print `most_common_vp_chunks`. What sticks out to you about the most common verb phrase chunks? Are you surprised by anything? Open the hint to see our analysis. Want to see how `vp_chunk_counter()` works? Use the file navigator to open `chunk_counters.py` and inspect `vp_chunk_counter()`.
+
+Hint
+You can call `vp_chunk_counter()` to count the most common verb phrase chunks as follows:
+```
+most_common_vp_chunks = vp_chunk_counter(vp_chunked_text)
+```
+Print `most_common_vp_chunks` to view the `30` most common chunks in descending order, given in the form `(VP-Chunk, Count)`.
+
+**Analysis for _The Picture of Dorian Gray_**
+
+Looking at `most_common_vp_chunks`, some interesting findings appear. The verb phrases `i want`, `i know` and `i have` occur frequently, indicating a theme of desire and need.
+
+**Analysis for _The Iliad_**
+
+Looking at `most_common_vp_chunks`, you can see that verb phrases of the form you defined in your chunk grammar do not appear as often in _The Iliad_ as noun phrases. This can indicate a different style of writing taken by the author that does not follow traditional grammatical style (i.e. poetry). Even when chunks are not found, their absence can give you insight!
+
+## Go Further On Your Own!
+
+16. Amazing! You have performed a syntax parsing analysis on a novel and gained insight into both the meaning of the text and how the author thinks, without reading a page! Now’s your chance to get creative. Is there a different pattern of parts-of-speech you want to identify and count in the novel you selected? Add a new piece of chunk grammar and repeat the process of chunking. What do you find?
+
+17. Not the biggest fan of _The Picture of Dorian Gray_ or _The Iliad?_ No worries! Included in the file navigator is a blank text file named `my_text.txt`. Open the file and copy any text of your choice (novel, script, article, etc.) into the file. Save the file and then return to `script.py`. Update the opened text file to `my_text.txt` and rerun `script.py` to perform a syntax parsing analysis on your text! What insights or deeper meanings did you discover?
+
+### Exercise
+```
+from nltk import pos_tag, RegexpParser
+from tokenize_words import word_sentence_tokenize
+from chunk_counters import np_chunk_counter, vp_chunk_counter
+
+# import text of choice here
+text = open("the_iliad.txt",encoding='utf-8').read().lower()
+
+# sentence and word tokenize text here
+word_tokenized_text = word_sentence_tokenize(text)
+
+# store and print any word tokenized sentence here
+single_word_tokenized_sentence = word_tokenized_text
+#print(single_word_tokenized_sentence)
+
+# create a list to hold part-of-speech tagged sentences here
+pos_tagged_text = list()
+
+# create a for loop through each word tokenized sentence here
+for word_tokenized_sentence in word_tokenized_text:
+
+# part-of-speech tag each sentence and append to list of pos-tagged sentences here
+pos_tagged_text.append(pos_tag(word_tokenized_sentence))
+
+# store and print any part-of-speech tagged sentence here
+single_pos_sentence = pos_tagged_text
+#print(single_pos_sentence)
+
+# define noun phrase chunk grammar here
+np_chunk_grammar = "NP: {<DT>?<JJ>*<NN>}"
+
+# create noun phrase RegexpParser object here
+np_chunk_parser = RegexpParser(np_chunk_grammar)
+
+# define verb phrase chunk grammar here
+vp_chunk_grammar = "VP: {<DT>?<JJ>*<NN><VB.*><RB.?>?}"
+
+# create verb phrase RegexpParser object here
+vp_chunk_parser = RegexpParser(vp_chunk_grammar)
+
+# create a list to hold noun phrase chunked sentences and a list to hold verb phrase chunked sentences here
+np_chunked_text = []
+vp_chunked_text = []
+
+# create a for loop through each pos-tagged sentence here
+for pos_tagged_sentence in pos_tagged_text:
+
+# chunk each sentence and append to lists here
+np_chunked_text.append(np_chunk_parser.parse(pos_tagged_sentence))
+vp_chunked_text.append(vp_chunk_parser.parse(pos_tagged_sentence))
+
+# store and print the most common NP-chunks here
+most_common_np_chunks = np_chunk_counter(np_chunked_text)
+print(most_common_np_chunks)
+
+# store and print the most common VP-chunks here
+most_common_vp_chunks = vp_chunk_counter(vp_chunked_text)
+print(most_common_vp_chunks)
+```

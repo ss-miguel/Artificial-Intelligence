@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "9df1809c9fba4dbb",
+        "id": "3fc5ede891adf30d",
         "type": "tabs",
         "children": [
           {
-            "id": "a35c442e5223fd07",
+            "id": "7aae27b4e207d893",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Artificial Inteligence/Natural Language Parsing With Regular Expressions.md",
-                "mode": "preview",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Artificial Inteligence/Natural Language Parsing With Regular Expressions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Artificial Inteligence/Natural Language Parsing With Regular Expressions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Artificial Inteligence/Natural Language Parsing With Regular Expressions.md"
-              }
+              "state": {}
             }
           },
           {
@@ -158,10 +150,10 @@
       "random-note:Open random note": false
     }
   },
-  "active": "a35c442e5223fd07",
+  "active": "7aae27b4e207d893",
   "lastOpenFiles": [
-    "Artificial Inteligence/Special Issue on Population & Health.md",
     "Artificial Inteligence/Natural Language Parsing With Regular Expressions.md",
+    "Artificial Inteligence/Special Issue on Population & Health.md",
     "Artificial Inteligence/Special Issue on Large Language Models (LLMs) and Cross-Modal Generative AI.md",
     "Research Theory/Research.md",
     "Challenge/Clinical Decision Suport.md",
