@@ -8,13 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ae9d0327689dba76",
+            "id": "a35c442e5223fd07",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Artificial Inteligence/Natural Language Parsing With Regular Expressions.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -158,15 +158,17 @@
       "random-note:Open random note": false
     }
   },
-  "active": "ae9d0327689dba76",
+  "active": "a35c442e5223fd07",
   "lastOpenFiles": [
+    "Artificial Inteligence/Special Issue on Population & Health.md",
+    "Artificial Inteligence/Natural Language Parsing With Regular Expressions.md",
+    "Artificial Inteligence/Special Issue on Large Language Models (LLMs) and Cross-Modal Generative AI.md",
     "Research Theory/Research.md",
     "Challenge/Clinical Decision Suport.md",
     "Challenge/Presentation.md",
     "Challenge/Requirements for Artifact Contributors to CD Connect Repository.md",
     "Research Theory",
     "Artificial Inteligence",
-    "Challenge",
-    "Artificial Inteligence/Natural Language Parsing With Regular Expressions.md"
+    "Challenge"
   ]
 }
