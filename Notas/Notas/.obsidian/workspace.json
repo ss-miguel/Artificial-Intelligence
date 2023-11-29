@@ -4,18 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "3fc5ede891adf30d",
+        "id": "2d588629ae702f78",
         "type": "tabs",
         "children": [
           {
-            "id": "7aae27b4e207d893",
+            "id": "fc5a5d8073bfac8c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Glosario.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "c960c1d4f016fa94",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Categorías Gramaticales.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "9297afcac3a4b2dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Casos Gramaticales.md",
+                "mode": "source",
+                "source": true
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -65,7 +94,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "9ec1ae3df1fd1732",
@@ -81,6 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Casos Gramaticales.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Casos Gramaticales.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +150,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Casos Gramaticales.md"
+              }
             }
           },
           {
@@ -131,7 +165,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -150,15 +185,30 @@
       "random-note:Open random note": false
     }
   },
-  "active": "7aae27b4e207d893",
+  "active": "9297afcac3a4b2dc",
   "lastOpenFiles": [
+    "Categorías Gramaticales.md",
+    "Casos Gramaticales.md",
+    "Glosario.md",
+    "Untitled.canvas",
+    "2023-11-23.md",
+    "Epidemiology/Higiene.md",
+    "Noviembre/202311221249.md",
+    "Noviembre",
+    "Determinantes Sociales.md",
+    "Challenge/Clinical Decision Support.md",
+    "Challenge/Presentation.md",
+    "Challenge/Requirements for Artifact Contributors to CD Connect Repository.md",
+    "Epidemiología.md",
+    "DIG.md",
+    "Epidemiology/Ambiente.md",
+    "Ambiente.md",
+    "Medio_Ambiente.md",
+    "Research Theory/Research.md",
+    "Epidemiology",
     "Artificial Inteligence/Natural Language Parsing With Regular Expressions.md",
     "Artificial Inteligence/Special Issue on Population & Health.md",
     "Artificial Inteligence/Special Issue on Large Language Models (LLMs) and Cross-Modal Generative AI.md",
-    "Research Theory/Research.md",
-    "Challenge/Clinical Decision Suport.md",
-    "Challenge/Presentation.md",
-    "Challenge/Requirements for Artifact Contributors to CD Connect Repository.md",
     "Research Theory",
     "Artificial Inteligence",
     "Challenge"

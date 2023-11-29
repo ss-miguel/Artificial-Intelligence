@@ -1,0 +1,18 @@
+- Adjetivos
+- ‎Adjetivos sustantivados‎
+- Adverbios‎
+- Afijos‎
+- Artículos‎
+- Conjunciones‎
+- Contracciones‎
+- Interjecciones‎
+- Locuciones‎
+- Onomatopeyas‎
+- Partículas‎
+- Posposiciones‎
+- Postposiciones‎
+- Preposiciones‎
+- Preverbos‎
+- Pronombres‎
+- Sustantivos‎
+- Verbos‎

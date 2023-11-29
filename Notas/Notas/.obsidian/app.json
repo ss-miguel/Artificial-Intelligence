@@ -2,5 +2,7 @@
   "livePreview": false,
   "strictLineBreaks": true,
   "propertiesInDocument": "source",
-  "vimMode": false
+  "vimMode": false,
+  "alwaysUpdateLinks": true,
+  "promptDelete": false
 }

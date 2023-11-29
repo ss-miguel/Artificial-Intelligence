@@ -1,0 +1,34 @@
+## Datos relevantes
+- Oficina Internacional de Higiene Pública en París en el año 1907
+- Organización Mundial de la Salud, que toma este nombre a partir del 7 de abril de 1948
+- Objetivo particular: lograr que el individuo y
+	- Objetivo general: que la población
+		- Disfruten de un óptimo estado de salud
+- Actividades dirigidas a lograr y mantener
+	- Los factores del [Medio Ambiente](Ambiente)
+		- Permitan disfrutar de salud
+- La salud ambiental comprende factores:
+	- Físicos
+	- Químicos
+	- Biológicos
+	- Sociales
+	- Psicosociales
+- En teoría y práctica se refiere en cuanto a los factores que pueden afectar la salud:
+	- Evaluación
+	- Corrección
+	- Control y
+	- Prevención
+- Higiene ambiental y sus subsistemas:
+	- Higiene comunal
+	- Higiene de los alimentos y de la nutrición
+	- Higiene escolar
+	- Higiene del trabajo
+- La higiene personal incide en:
+	- Aseo personal
+	- Vestuario
+	- Alimentación
+	- Ventilación
+	- Ejercicio físico
+	- Sueño
+	- Higiene mental
+	- Higiene bucal

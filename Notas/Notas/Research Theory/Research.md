@@ -1,3 +1,3 @@
 - Quickly find relevant and authoritative research and stay up to date in your field of study
-- Identify and assess reviewers, potential collaborators or experts across disciplines
+- Identify and assess reviewers, potential collaborators, or experts across disciplines
 - Use and interpret the most relevant metrics to help you evaluate content and advance your career
